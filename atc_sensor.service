@@ -1,0 +1,12 @@
+[Unit]
+Description=atc_blescan
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/temperature/atc_blescan
+ExecStart=/home/temperature/atc_blescan/venv/bin/python scan.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
